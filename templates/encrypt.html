@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Encrypt</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <a href="/">🏠 Home</a>
+    <a href="/encrypt">Encrypt</a>
+    <a href="/decrypt">Decrypt</a>
+  </div>
+  <div class="container">
+    <h1>AES Message Encryptor</h1>
+    <label for="message">Enter Message:</label>
+    <textarea id="message" rows="4"></textarea>
+
+    <label for="key">Enter Key (16/24/32 characters):</label>
+    <input type="text" id="key">
+
+    <button onclick="callBackendEncrypt()">Generate Encrypted Message</button>
+
+    <div id="result"></div>
+  </div>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

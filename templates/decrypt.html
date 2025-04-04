@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Decrypt</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <a href="/">🏠 Home</a>
+    <a href="/encrypt">Encrypt</a>
+    <a href="/decrypt">Decrypt</a>
+  </div>
+  <div class="container">
+    <h1>AES Message Decryptor</h1>
+    <label for="encrypted">Enter Encrypted Message:</label>
+    <textarea id="encrypted" rows="4"></textarea>
+
+    <label for="key2">Enter Key (16/24/32 characters):</label>
+    <input type="text" id="key2">
+
+    <button onclick="callBackendDecrypt()">Generate Original Message</button>
+
+    <div id="decryptedResult"></div>
+  </div>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
